@@ -1,4 +1,4 @@
-# LvTSimulator
+# TvLSimulator
  Replicate the simulation of the 2022 Ig Nobel Prize in Economics winning paper!
 
 The award was given "for explaining, mathematically, why success most often goes not to the most talented people, but instead to the luckiest" (Improbable Research, 2022). The paper runs numerical simulations of the so-called "Talent vs. Luck" debate and says that luck is more important than talent.
