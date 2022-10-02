@@ -1,8 +1,6 @@
 library(tidyverse)
 library(sqldf)
 
-getwd()
-
 dat <- read.csv("data.csv")
 # Check talent distribution
 ggplot(data = dat, aes(x = talent)) +
@@ -18,16 +16,12 @@ scale_y_log10()
 sum(sqldf("SELECT wealth FROM dat 
     ORDER BY wealth DESC
     LIMIT (SELECT 0.20 * COUNT(*) FROM dat)")) /
-sum(sqldf("SELECT SUM(wealth) FROM dat"))
+(sqldf("SELECT SUM(wealth) FROM dat"))
 
 sum(sqldf("SELECT wealth FROM dat
        ORDER BY wealth
        LIMIT (SELECT 0.80 * COUNT(*) FROM dat)")) /
-sum(sqldf("SELECT SUM(wealth) FROM dat"))
-
-sqldf("SELECT * FROM dat 
-    ORDER BY wealth DESC
-    LIMIT (SELECT 0.004 * COUNT(*) FROM dat)")
+(sqldf("SELECT SUM(wealth) FROM dat"))
 
 # Check wealth distribution with talent
 ggplot(data = dat, aes(x = wealth, y = talent)) +
