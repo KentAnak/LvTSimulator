@@ -24,7 +24,9 @@ This source reproduced the results of this paper in Python and R, and then perfo
 + Isn't the sociability of being able to encounter events also a talent? What are the results in the model where talented people encounter more events?　(SociableHuman model)
 + Is the ability to encounter unfortunate events without reducing one's assets also a talent? What would be the result in a model where talent would allow a person to avoid a halving of assets? (PreventiveHuman model)
 
-This code took a simpler approach than in the paper but was able to reproduce almost similar results. In particular, encounters with events use a Poisson distribution with a lambda value of around 0.5. In the csv data under the sample folder, the top 20% accounted for 79.9% of the wealth.
+This code took a simpler approach than in the paper but was able to reproduce almost similar results. In particular, encounters with events use a Poisson distribution with a lambda value of around 0.5. The distribution of talent, mean 0.6 and standard deviation 0.1, is the same as in the original paper. However, with respect to event encounters, if 1000 people encounter 500 events, we cannot assert a Poisson distribution with a lambda of 0.5. In this code, lambda value is set to 0.45, a little below 0.5, to make it easier to reproduce Pareto's law. This value is subject to adjustment.
+
+In the csv data under the sample folder, the top 20% accounted for 79.9% of the wealth.
 
 The normal distribution of talent: Graph 1; the power distribution of assets: Graph 2; Graphs 3 and 4 show the weak correlation between talent and wealth; Graphs 5 and 6 show the strong correlation between luck and wealth.
 
@@ -49,6 +51,11 @@ The <b>PreventiveHuman model</b> reproduced Pareto's Law and showed results in w
 |Model 3|81.7%|<img src="Sample/plot8.png" alt="attach:Graph 8" width="100">|<img src="Sample/plot9.png" alt="attach:Graph 9" width="100">|
 
 After all, talent is not irrelevant depending on the model applied.
+
+
+The repository is linked from the following site as one of the community codes for the paper.
+https://physics.paperswithcode.com/paper/talent-vs-luck-the-role-of-randomness-in
+
 
 <b>Reference:</b><br><br>
 Improbable Research.(2022). <i>Ignobel Prize Winners|2022</i>. https://improbable.com/ig/winners/#ig2022<br><br>
