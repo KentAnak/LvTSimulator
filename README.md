@@ -50,12 +50,15 @@ The <b>PreventiveHuman model</b> reproduced Pareto's Law and showed results in w
 |:---:|:---:|:---:|:---:|
 |Model 3|81.7%|<img src="Sample/plot8.png" alt="attach:Graph 8" width="100">|<img src="Sample/plot9.png" alt="attach:Graph 9" width="100">|
 
-After all, talent is not irrelevant depending on the model applied.
+After all, talent is not irrelevant depending on the model applied.<br><br>
 
-
-The repository is linked from the following site as one of the community codes for the paper.
+The repository is linked from the following site as one of the unofficial community codes for the paper.
 https://physics.paperswithcode.com/paper/talent-vs-luck-the-role-of-randomness-in
-
+<br><br>
+Execution environment at present:<br>
+Python:3.10.6 (numpy:1.23.2)<br>
+R:4.2.0 (tidyverse:1.3.2, sqldf:0.4.11)<br>
+<br>
 
 <b>Reference:</b><br><br>
 Improbable Research.(2022). <i>Ignobel Prize Winners|2022</i>. https://improbable.com/ig/winners/#ig2022<br><br>
