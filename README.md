@@ -4,7 +4,7 @@
 
 One of the Ignobel Prize, a joke prize in parody of the Nobel Prize, was awarded in 2022 to a paper by Alessandro Pluchino, Alessio Emanuele Biondo, and Andrea Rapisarda for their work in economics.
 
-The award was given "for explaining, mathematically, why success most often goes not to the most talented people, but instead to the luckiest" (Improbable Research, 2022). The paper runs numerical simulations of the so-called "Talent vs. Luck" debate and says that luck is more important than talent.
+The award was given "for explaining mathematically, why success most often goes not to the most talented people, but instead to the luckiest" (Improbable Research, 2022). The paper runs numerical simulations of the so-called "Talent vs. Luck" debate and says that luck is more important than talent.
 
 It simulates the following conditions (Pluchino et al., 2018).
 
@@ -22,9 +22,11 @@ The simulation results are as follows
 
 The second half of the paper suggests that a uniform subsidy is more efficient than a talent-based subsidy in correcting the good luck gap.
 
-## Objectives of this program
+## Objectives
 
 This code reproduced the results of this paper in Python and R and then performed two additional verifications.
+
+## Simulation Reproduction
 
 We took a simpler approach than in the paper. In particular, encounters with events use a Poisson distribution with a lambda value of around 0.5. The distribution of talent, mean 0.6 and standard deviation 0.1, is the same as in the original paper. However, with respect to event encounters, if 1000 people encounter 500 events, we cannot assert a Poisson distribution with a lambda of 0.5. In this code, lambda value is set to 0.45, a little below 0.5, to make it easier to reproduce Pareto's law. This value is subject to adjustment.
 
@@ -40,7 +42,7 @@ The normal distribution of talent: Graph 1; the power distribution of assets: Gr
 |:---:|:---:|:---:|:---:|
 |<img src="Sample/plot3.png" alt="attach:Graph 3" width="100"> |<img src="Sample/plot4.png" alt="attach:Graph 4" width="100">|<img src="Sample/plot5.png" alt="attach:Graph 5" width="100"> |<img src="Sample/plot6.png" alt="attach:Graph 6" width="100"> |
 
-## Additional models considered in this program
+## Additional models
 
 We created and tested additional models to answer the following questions
 
@@ -75,7 +77,6 @@ https://physics.paperswithcode.com/paper/talent-vs-luck-the-role-of-randomness-i
 Python:3.10.6 (numpy:1.23.2)<br>
 R:4.2.0 (tidyverse:1.3.2, sqldf:0.4.11)<br>
 <br>
-
 <b>Reference:</b><br>
 Improbable Research.(2022). <i>Ignobel Prize Winners|2022</i>. https://improbable.com/ig/winners/#ig2022<br>
 Pluchino, A., Biondo, A. E., & Rapisarda, A.(2018). Talent vs. Luck: The Role of Randomness in Success and Failure. <i>Advances in Complex Systems, 21[3,4]</i>. https://doi.org/10.1142/S0219525918500145
