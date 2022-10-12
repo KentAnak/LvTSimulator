@@ -24,9 +24,9 @@ The second half of the paper suggests that a uniform subsidy is more efficient t
 
 ## Objectives of this program
 
-This source reproduced the results of this paper in Python and R and then performed two additional verifications.
+This code reproduced the results of this paper in Python and R and then performed two additional verifications.
 
-This code took a simpler approach than in the paper but was able to reproduce almost similar results. In particular, encounters with events use a Poisson distribution with a lambda value of around 0.5. The distribution of talent, mean 0.6 and standard deviation 0.1, is the same as in the original paper. However, with respect to event encounters, if 1000 people encounter 500 events, we cannot assert a Poisson distribution with a lambda of 0.5. In this code, lambda value is set to 0.45, a little below 0.5, to make it easier to reproduce Pareto's law. This value is subject to adjustment.
+We took a simpler approach than in the paper. In particular, encounters with events use a Poisson distribution with a lambda value of around 0.5. The distribution of talent, mean 0.6 and standard deviation 0.1, is the same as in the original paper. However, with respect to event encounters, if 1000 people encounter 500 events, we cannot assert a Poisson distribution with a lambda of 0.5. In this code, lambda value is set to 0.45, a little below 0.5, to make it easier to reproduce Pareto's law. This value is subject to adjustment.
 
 In the csv data under the sample folder, the top 20% accounted for 79.9% of the wealth. Depending on the value of lambda, we succeeded in reproducing a result almost identical to the graph shown in the paper.
 
@@ -47,7 +47,7 @@ We created and tested additional models to answer the following questions
 + Isn't the sociability of being able to encounter events also a talent? What are the results in the model where talented people encounter more events?　(SociableHuman model)
 + Is the ability to encounter unfortunate events without reducing one's assets also a talent? What would be the result in a model where talent would allow a person to avoid a halving of assets? (PreventiveHuman model)
 
-in the <b>SociableHuman model</b>, the luck advantage did not change. The disparity would be larger than in reality and may be inappropriate for the model. Graph 7 shows the distribution in this model where the higher the talent, the greater or smaller the wealth.
+In the <b>SociableHuman model</b>, the luck advantage did not change. The disparity would be larger than in reality and may be inappropriate for the model. Graph 7 shows the distribution in this model where the higher the talent, the greater or smaller the wealth.
 
 || Top 20% have | Glaph 7 |
 |:---:|:---:|:---:|
@@ -61,17 +61,21 @@ The <b>PreventiveHuman model</b> reproduced Pareto's Law and showed results in w
 
 After all, talent is not irrelevant depending on the model applied.<br><br>
 
+
+## References and external links
+
 The original personal blog describing this program is here. It is written in Japanese.
 https://qiita.com/B3QP/items/c9150d0a5af013175592
 
 The repository is linked from the following site as one of the unofficial community codes for the paper.
 https://physics.paperswithcode.com/paper/talent-vs-luck-the-role-of-randomness-in
 <br><br>
-Execution environment at present:<br>
+
+<b>Execution environment:</b><br>
 Python:3.10.6 (numpy:1.23.2)<br>
 R:4.2.0 (tidyverse:1.3.2, sqldf:0.4.11)<br>
 <br>
 
-<b>Reference:</b><br><br>
-Improbable Research.(2022). <i>Ignobel Prize Winners|2022</i>. https://improbable.com/ig/winners/#ig2022<br><br>
+<b>Reference:</b><br>
+Improbable Research.(2022). <i>Ignobel Prize Winners|2022</i>. https://improbable.com/ig/winners/#ig2022<br>
 Pluchino, A., Biondo, A. E., & Rapisarda, A.(2018). Talent vs. Luck: The Role of Randomness in Success and Failure. <i>Advances in Complex Systems, 21[3,4]</i>. https://doi.org/10.1142/S0219525918500145
