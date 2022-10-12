@@ -1,5 +1,8 @@
 # TvLSimulator
- Replicate the simulation of the 2022 Ignobel Prize in Economics winning paper!
+
+## Introduction
+
+One of the Ignobel Prize, a joke prize in parody of the Nobel Prize, was awarded in 2022 to a paper by Alessandro Pluchino, Alessio Emanuele Biondo, and Andrea Rapisarda for their work in economics.
 
 The award was given "for explaining, mathematically, why success most often goes not to the most talented people, but instead to the luckiest" (Improbable Research, 2022). The paper runs numerical simulations of the so-called "Talent vs. Luck" debate and says that luck is more important than talent.
 
@@ -19,14 +22,13 @@ The simulation results are as follows
 
 The second half of the paper suggests that a uniform subsidy is more efficient than a talent-based subsidy in correcting the good luck gap.
 
-This source reproduced the results of this paper in Python and R, and then performed the following two additional verifications.
+## Objectives of this program
 
-+ Isn't the sociability of being able to encounter events also a talent? What are the results in the model where talented people encounter more events?　(SociableHuman model)
-+ Is the ability to encounter unfortunate events without reducing one's assets also a talent? What would be the result in a model where talent would allow a person to avoid a halving of assets? (PreventiveHuman model)
+This source reproduced the results of this paper in Python and R and then performed two additional verifications.
 
 This code took a simpler approach than in the paper but was able to reproduce almost similar results. In particular, encounters with events use a Poisson distribution with a lambda value of around 0.5. The distribution of talent, mean 0.6 and standard deviation 0.1, is the same as in the original paper. However, with respect to event encounters, if 1000 people encounter 500 events, we cannot assert a Poisson distribution with a lambda of 0.5. In this code, lambda value is set to 0.45, a little below 0.5, to make it easier to reproduce Pareto's law. This value is subject to adjustment.
 
-In the csv data under the sample folder, the top 20% accounted for 79.9% of the wealth.
+In the csv data under the sample folder, the top 20% accounted for 79.9% of the wealth. Depending on the value of lambda, we succeeded in reproducing a result almost identical to the graph shown in the paper.
 
 The normal distribution of talent: Graph 1; the power distribution of assets: Graph 2; Graphs 3 and 4 show the weak correlation between talent and wealth; Graphs 5 and 6 show the strong correlation between luck and wealth.
 
@@ -37,6 +39,13 @@ The normal distribution of talent: Graph 1; the power distribution of assets: Gr
 | Glaph 3 | Glaph 4 | Glaph 5 | Glaph 6 |
 |:---:|:---:|:---:|:---:|
 |<img src="Sample/plot3.png" alt="attach:Graph 3" width="100"> |<img src="Sample/plot4.png" alt="attach:Graph 4" width="100">|<img src="Sample/plot5.png" alt="attach:Graph 5" width="100"> |<img src="Sample/plot6.png" alt="attach:Graph 6" width="100"> |
+
+## Additional models considered in this program
+
+We created and tested additional models to answer the following questions
+
++ Isn't the sociability of being able to encounter events also a talent? What are the results in the model where talented people encounter more events?　(SociableHuman model)
++ Is the ability to encounter unfortunate events without reducing one's assets also a talent? What would be the result in a model where talent would allow a person to avoid a halving of assets? (PreventiveHuman model)
 
 in the <b>SociableHuman model</b>, the luck advantage did not change. The disparity would be larger than in reality and may be inappropriate for the model. Graph 7 shows the distribution in this model where the higher the talent, the greater or smaller the wealth.
 
@@ -51,6 +60,9 @@ The <b>PreventiveHuman model</b> reproduced Pareto's Law and showed results in w
 |Model 3|81.7%|<img src="Sample/plot8.png" alt="attach:Graph 8" width="100">|<img src="Sample/plot9.png" alt="attach:Graph 9" width="100">|
 
 After all, talent is not irrelevant depending on the model applied.<br><br>
+
+The original personal blog describing this program is here. It is written in Japanese.
+https://qiita.com/B3QP/items/c9150d0a5af013175592
 
 The repository is linked from the following site as one of the unofficial community codes for the paper.
 https://physics.paperswithcode.com/paper/talent-vs-luck-the-role-of-randomness-in
